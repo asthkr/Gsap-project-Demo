@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+body .container,
+body .container-md,
+body .container-lg,
+body .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+}
+
+.singlePage .md-rightSide {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  right: 0;
+  background: #f2efe6;
+}
+.singlePage .md-rightSide .headTag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 40px 0px 0;
+}
+.singlePage .md-rightSide .headTag h6 {
+  font-size: 14px;
+}
+.singlePage .md-rightSide .headTag p {
+  font-size: 14px;
+}
+.singlePage .md-rightSide .pageTitle {
+  padding: 12vw 4vw 5vw 4vw;
+}
+.singlePage .md-rightSide .pageTitle .heading .headingText h1 {
+  font-size: 66px;
+  line-height: 0.8;
+  color: black;
+  font-weight: 400;
+}
+.singlePage .md-rightSide .pageTitle .subHeading .subheadText p {
+  font-size: 24px;
+  line-height: 1.2;
+}
+.singlePage .md-rightSide .pageTitle .subHeading .pageLink {
+  display: flex;
+}
+.singlePage .parentGrid {
+  position: relative;
+}
+.singlePage .parentGrid .scroller-copy {
+  position: relative;
+  width: 100%;
+}
+.singlePage .parentGrid .scroller-copy2 {
+  position: relative;
+  width: 100%;
+}
+.singlePage .parentGrid .gridproperty {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 1.5rem;
+}
+.singlePage .parentGrid .gridproperty .gridItem {
+  width: 100%;
+  height: 60vh;
+  background-color: #fff;
+}
+.singlePage .parentGrid .gridproperty .gridItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.singlePage .parentGrid .gridproperty .gridItem2 {
+  width: 100%;
+  height: 65vh;
+  background-color: #fff;
+}
+.singlePage .parentGrid .gridproperty .gridItem2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
