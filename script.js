@@ -1,1 +1,0 @@
-gsap.utils.toArray(".section").

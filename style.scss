@@ -1,132 +1,126 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-    .container,
-    .container-md,
-    .container-lg,
-    .container-fluid {
-        margin: 0;
-        padding: 0;
-    }
+  .container,
+  .container-md,
+  .container-lg,
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-        margin: 0;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 }
 
 .singlePage {
-    .md-rightSide {
-        height: 100vh;
-        position: sticky;
-        top: 0;
-        right: 0;
-        background: #f2efe6;
+  .md-rightSide {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background: #f2efe6;
 
-        .headTag {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 20px 40px 0px 0;
+    .headTag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 20px 40px 0px 0;
 
-            h6 {
-                font-size: 14px;
-            }
+      h6 {
+        font-size: 14px;
+      }
 
-            p {
-                font-size: 14px;
-            }
-        }
-
-        .pageTitle {
-            padding: 12vw 4vw 5vw 4vw;
-
-            .heading {
-                .headingText {
-                    h1 {
-                        font-size: 66px;
-                        line-height: .8;
-                        color: black;
-                        font-weight: 400;
-
-                    }
-                }
-            }
-
-            .subHeading {
-                .subheadText {
-                    p {
-                        font-size: 24px;
-                        line-height: 1.2;
-                    }
-                }
-
-                .pageLink {display: flex;}
-            }
-        }
+      p {
+        font-size: 14px;
+      }
     }
 
-    .parentGrid {
-        position: relative;
+    .pageTitle {
+      padding: 12vw 4vw 5vw 4vw;
 
-        .scroller-copy {
-            position: relative;
-            width: 100%;
-
-        }
-        #scroller2 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
+      .heading {
+        .headingText {
+          h1 {
+            font-size: 66px;
+            line-height: 0.8;
+            color: black;
+            font-weight: 400;
           }
-
-        .gridproperty {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(8, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 1.5rem;
-
-            .gridItem {
-                width: 100%;
-                height: 60vh;
-                background-color: #fff;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            .gridItem2 {
-                width: 100%;
-                height: 65vh;
-                background-color: #fff;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
         }
+      }
+
+      .subHeading {
+        .subheadText {
+          p {
+            font-size: 24px;
+            line-height: 1.2;
+          }
+        }
+
+        .pageLink {
+          display: flex;
+        }
+      }
     }
+  }
+
+  .parentGrid {
+    position: relative;
+    height: 100%;
+    .scroller-copy {
+      position: relative;
+      width: 100%;
+    }
+
+    .gridproperty {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 1.5rem;
+
+      .gridItem {
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .gridItem2 {
+        width: 100%;
+        height: 65vh;
+        background-color: #fff;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }

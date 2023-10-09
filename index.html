@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col-lg-6 ps-0">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-6">
                 <div class="parentGrid">
                   <div class="gridproperty scroller">
                     <div class="gridItem">
@@ -34,21 +34,21 @@
                     </div>
                     <div class="gridItem">
                       <img
-                        src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
+                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
                         alt="Grid-images"
                       />
                     </div>
 
                     <div class="gridItem">
                       <img
-                        src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
+                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
                         alt="Grid-images"
                       />
                     </div>
 
                     <div class="gridItem">
                       <img
-                        src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
+                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
                         alt="Grid-images"
                       />
                     </div>
@@ -63,9 +63,9 @@
                   <div class="scroller-copy"></div>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <div class="col-6">
                 <div class="parentGrid">
-                  <div class="gridproperty" id="scroller2">
+                  <div class="gridproperty scrollertwo">
                     <div class="gridItem2">
                       <img
                         src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
@@ -100,6 +100,7 @@
                       />
                     </div>
                   </div>
+                  <div class="scroller-copytwo"></div>
                 </div>
               </div>
             </div>
@@ -154,76 +155,52 @@
       </div>
     </section>
     <script>
-      // Init timeline
+      $(document).ready(function () {
+        $(".scroller").mouseover(function () {
+          $this.css("background-color", "yellow");
+        });
+        $(".scroller").mouseout(function () {
+          $this.css("background-color", "lightgray");
+        });
+      });
+    </script>
+    <script>
       let scrolltl = gsap.timeline();
-
-      // Set some vars and values
       var scroller = document.querySelector(".scroller");
       let scrollerheight = scroller.offsetHeight;
       let windowheight = window.innerHeight;
       let scrolldistance = scrollerheight - windowheight;
       let scrolling = false;
 
-      // Make a copy div with scroll distance
       let scrollcopy = document.querySelector(".scroller-copy");
-      let scrollscrolllength = scrollerheight * 4;
+      let scrollscrolllength = scrollerheight * 1;
       scrollcopy.style.height = scrollscrolllength + "px";
 
-      // Slowly scroll the items
       scrolltl.to(scroller, {
         y: -scrolldistance,
-        duration: 250,
+        duration: 10,
         timeScale: 1,
-        ease: "inOut",
-      });
-
-      // Listen to the scrolltrigger, and sync the animation speed
-      var scrollerTrigger = ScrollTrigger.create({
-        trigger: scrollcopy,
-        start: "top top",
-        end: "bottom bottom",
-        onUpdate: (self) => {
-          var velo = self.getVelocity();
-          var speed = velo * 0.01;
-          scrolltl.timeScale(speed);
-        },
-      });
-
-      // On scrolling play the timeline
-      ScrollTrigger.addEventListener("scrollStart", function () {
-        scrolltl.play();
-      });
-
-      // When scrolling is done, pause for a moment, then resume animation
-      ScrollTrigger.addEventListener("scrollEnd", function () {
-        scrolltl.timeScale(1);
-        scrolltl.pause();
-
-        setTimeout(() => {
-          scrolltl.play();
-        }, 700);
+        ease: "linear",
       });
     </script>
     <script>
-      gsap.registerPlugin(ScrollTrigger);
+      let scroltl = gsap.timeline();
+      var scroler = document.querySelector(".scrollertwo");
+      let scrolerheight = scroller.offsetHeight;
+      let windowsheight = window.innerHeight;
+      let scroldistance = scrolerheight - windowsheight;
+      let scroling = false;
 
-      const images = document.querySelectorAll(".gridItem2");
-      // Function to animate the images moving upwards
-      function animateImages() {
-        gsap.to(images, {
-          y: "-=100%",
-          scrollTrigger: {
-            trigger: "#scroller2",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-            markers: true, // Set to true for debugging
-          },
-        });
-      }
+      let scrolcopy = document.querySelector(".scroller-copytwo");
+      let scrolscrolllength = scrolerheight * 1;
+      scrolcopy.style.height = scrolscrolllength + "px";
 
-      // Start the animation
-      animateImages();
+      scroltl.to(scroler, {
+        y: -scroldistance,
+        duration: 10,
+        timeScale: 1,
+        ease: "linear",
+      });
     </script>
   </body>
 </html>

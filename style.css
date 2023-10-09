@@ -5,7 +5,8 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 body .container,
 body .container-md,
@@ -64,22 +65,16 @@ body a {
 }
 .singlePage .parentGrid {
   position: relative;
+  height: 100%;
 }
 .singlePage .parentGrid .scroller-copy {
   position: relative;
   width: 100%;
 }
-.singlePage .parentGrid #scroller2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-}
 .singlePage .parentGrid .gridproperty {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 1.5rem;
 }
