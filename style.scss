@@ -89,12 +89,13 @@ body {
             width: 100%;
 
         }
-
-        .scroller-copy2 {
-            position: relative;
-            width: 100%;
-
-        }
+        #scroller2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+          }
 
         .gridproperty {
             display: grid;
