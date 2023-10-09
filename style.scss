@@ -91,7 +91,10 @@ body {
       width: 100%;
     }
 
-    .gridproperty {
+.scroller-copytwo {
+      position: relative;
+      width: 100%;
+    }    .gridproperty {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(5, 1fr);
