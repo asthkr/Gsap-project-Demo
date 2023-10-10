@@ -247,37 +247,46 @@
     </script> -->
     <script>
       let scrolltl = gsap.timeline();
-      var scroller = document.querySelector(".parentGrid");
+      var scroller = document.querySelector(".scroller");
       let scrollerheight = scroller.offsetHeight;
       let windowheight = window.innerHeight;
       let scrolldistance = scrollerheight - windowheight;
       let scrolling = false;
       let scrollcopy = document.querySelector(".scroller-copy");
       let scrollscrolllength = scrollerheight * 1;
-      scrollcopy.style.height = "0px";
+      scrollcopy.style.height =scrolldistance +  "px";
       scrolltl.to(scroller, {
         y: -scrolldistance,
-        duration: 10,
+        duration: 100,
         timeScale: 1,
         ease: "linear",
       });
     </script>
     <script>
       let scroltl = gsap.timeline();
-      var scroler = document.querySelector(".parentndGrid");
+      var scroler = document.querySelector(".scrollertwo");
       let scrolerheight = scroler.offsetHeight;
       let windowsheight = window.innerHeight;
       let scroldistance = scrolerheight - windowsheight;
       let scroling = false;
       let scrolcopy = document.querySelector(".scroller-copytwo");
       let scrolscrolllength = scrolerheight * 1;
-      scrolcopy.style.height = "0px";
+      scrolcopy.style.height =scroldistance  +"px";
       scroltl.to(scroler, {
         y: -scroldistance,
-        duration: 10,
+        duration: 100,
         timeScale: 1,
         ease: "linear",
       });
     </script>
+    <script>
+      function animateHeading(){
+        gsap.to("#textbox1", {opacity:1, duration:1,delay:0});
+        gsap.to("#textbox2", {opacity:1, duration:1,delay:1});
+        gsap.to("#textbox3", {opacity:1, duration:1,delay:2});
+        gsap.to("#textbox4", {opacity:1, duration:1,delay:3});
+      }
+      window.addEventListener('load', animateHeading);
+      </script>
   </body>
 </html>
