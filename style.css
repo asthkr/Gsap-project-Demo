@@ -5,8 +5,7 @@
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 body .container,
 body .container-md,
@@ -63,40 +62,83 @@ body a {
 .singlePage .md-rightSide .pageTitle .subHeading .pageLink {
   display: flex;
 }
-.singlePage .parentGrid {
+.singlePage .parentGrid,
+.singlePage .parentndGrid {
   position: relative;
-  height: 100%;
 }
-.singlePage .parentGrid .scroller-copy {
+.singlePage .parentGrid .scroller-copy,
+.singlePage .parentGrid .scroller-copytwo,
+.singlePage .parentndGrid .scroller-copy,
+.singlePage .parentndGrid .scroller-copytwo {
   position: relative;
   width: 100%;
 }
-.singlePage .parentGrid .gridproperty {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 1.5rem;
+.singlePage .parentGrid .gridoneproperty,
+.singlePage .parentGrid .gridtwoproperty,
+.singlePage .parentndGrid .gridoneproperty,
+.singlePage .parentndGrid .gridtwoproperty {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 0.5rem;
 }
-.singlePage .parentGrid .gridproperty .gridItem {
+.singlePage .parentGrid .gridoneproperty .gridItem,
+.singlePage .parentGrid .gridoneproperty .gridItem2,
+.singlePage .parentGrid .gridtwoproperty .gridItem,
+.singlePage .parentGrid .gridtwoproperty .gridItem2,
+.singlePage .parentndGrid .gridoneproperty .gridItem,
+.singlePage .parentndGrid .gridoneproperty .gridItem2,
+.singlePage .parentndGrid .gridtwoproperty .gridItem,
+.singlePage .parentndGrid .gridtwoproperty .gridItem2 {
+  position: relative;
   width: 100%;
-  height: 60vh;
+  height: 400px;
   background-color: #fff;
 }
-.singlePage .parentGrid .gridproperty .gridItem img {
+.singlePage .parentGrid .gridoneproperty .gridItem img,
+.singlePage .parentGrid .gridoneproperty .gridItem2 img,
+.singlePage .parentGrid .gridtwoproperty .gridItem img,
+.singlePage .parentGrid .gridtwoproperty .gridItem2 img,
+.singlePage .parentndGrid .gridoneproperty .gridItem img,
+.singlePage .parentndGrid .gridoneproperty .gridItem2 img,
+.singlePage .parentndGrid .gridtwoproperty .gridItem img,
+.singlePage .parentndGrid .gridtwoproperty .gridItem2 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.singlePage .parentGrid .gridproperty .gridItem2 {
-  width: 100%;
-  height: 65vh;
-  background-color: #fff;
+.singlePage .parentGrid .gridoneproperty .gridItem .gText,
+.singlePage .parentGrid .gridoneproperty .gridItem2 .gText,
+.singlePage .parentGrid .gridtwoproperty .gridItem .gText,
+.singlePage .parentGrid .gridtwoproperty .gridItem2 .gText,
+.singlePage .parentndGrid .gridoneproperty .gridItem .gText,
+.singlePage .parentndGrid .gridoneproperty .gridItem2 .gText,
+.singlePage .parentndGrid .gridtwoproperty .gridItem .gText,
+.singlePage .parentndGrid .gridtwoproperty .gridItem2 .gText {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
 }
-.singlePage .parentGrid .gridproperty .gridItem2 img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.singlePage .parentGrid .gridoneproperty .gridItem .gText span,
+.singlePage .parentGrid .gridoneproperty .gridItem2 .gText span,
+.singlePage .parentGrid .gridtwoproperty .gridItem .gText span,
+.singlePage .parentGrid .gridtwoproperty .gridItem2 .gText span,
+.singlePage .parentndGrid .gridoneproperty .gridItem .gText span,
+.singlePage .parentndGrid .gridoneproperty .gridItem2 .gText span,
+.singlePage .parentndGrid .gridtwoproperty .gridItem .gText span,
+.singlePage .parentndGrid .gridtwoproperty .gridItem2 .gText span {
+  font-size: 18px;
+  font-weight: 600;
+}
+.singlePage .parentGrid .gridoneproperty .gridItem2,
+.singlePage .parentGrid .gridtwoproperty .gridItem2,
+.singlePage .parentndGrid .gridoneproperty .gridItem2,
+.singlePage .parentndGrid .gridtwoproperty .gridItem2 {
+  height: 450px;
 }/*# sourceMappingURL=style.css.map */

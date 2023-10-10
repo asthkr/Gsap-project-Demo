@@ -5,8 +5,7 @@
 }
 
 body {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 
   .container,
   .container-md,
@@ -83,46 +82,51 @@ body {
     }
   }
 
-  .parentGrid {
+  .parentGrid,
+  .parentndGrid {
     position: relative;
-    height: 100%;
-    .scroller-copy {
+
+    .scroller-copy,
+    .scroller-copytwo {
       position: relative;
       width: 100%;
     }
+    .gridoneproperty,
+    .gridtwoproperty {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
 
-.scroller-copytwo {
-      position: relative;
-      width: 100%;
-    }    .gridproperty {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 1.5rem;
-
-      .gridItem {
+      margin-right: 0.5rem;
+      .gridItem,
+      .gridItem2 {
+        position: relative;
         width: 100%;
-        height: 60vh;
+        height: 400px;
         background-color: #fff;
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+        .gText {
+          color: #fff;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 20px;
+          font-size: 16px;
+          font-weight: 500;
+          span {
+            font-size: 18px;
+            font-weight: 600;
+          }
         }
       }
-
       .gridItem2 {
-        width: 100%;
-        height: 65vh;
-        background-color: #fff;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        height: 450px;
       }
     }
   }

@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
@@ -21,83 +22,163 @@
     <section class="singlePage">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6 ps-0">
+          <div class="col-lg-6">
             <div class="row">
               <div class="col-6">
                 <div class="parentGrid">
-                  <div class="gridproperty scroller">
-                    <div class="gridItem">
-                      <img
-                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
-                        alt="gridimage"
-                      />
-                    </div>
-                    <div class="gridItem">
-                      <img
-                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
-                        alt="Grid-images"
-                      />
-                    </div>
-
-                    <div class="gridItem">
-                      <img
-                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
-                        alt="Grid-images"
-                      />
-                    </div>
-
-                    <div class="gridItem">
-                      <img
-                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
-                        alt="Grid-images"
-                      />
-                    </div>
-
+                  <div class="gridoneproperty scroller">
                     <div class="gridItem">
                       <img
                         src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
+                        alt="gridimage"
+                      />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="gridItem">
+                      <img
+                        src="images/skiing_zermatt_fw20-21_0501_c-1-1-scaled.webp"
+                        alt="gridimage"
+                      />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="gridItem">
+                      <img
+                        src="images/ghost-island-squoosh_h-suriel10_zoomed.webp"
+                        alt="gridimage"
+                      />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="gridItem">
+                      <img
+                        src="images/new_mammut_small-scaled.webp"
+                        alt="gridimage"
+                      />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="gridItem">
+                      <img src="images/moooi-button.webp" alt="gridimage" />
+                      <div class="gText text-black">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="gridItem">
+                      <img src="images/test.webp" alt="Grid-images" />
+                      <div class="gText text-black">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+
+                    <div class="gridItem">
+                      <img src="images/abel-nori.webp" alt="Grid-images" />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+
+                    <div class="gridItem">
+                      <img
+                        src="images/mollie-case-header.webp"
                         alt="Grid-images"
                       />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+
+                    <div class="gridItem">
+                      <img src="images/12.webp" alt="Grid-images" />
+                      <div class="gText text-black">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
                     </div>
                   </div>
                   <div class="scroller-copy"></div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="parentGrid">
-                  <div class="gridproperty scrollertwo">
+                <div class="parentndGrid">
+                  <div class="gridtwoproperty scrollertwo">
                     <div class="gridItem2">
-                      <img
-                        src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
-                        alt="Grid-images"
-                      />
+                      <img src="images/cover.webp" alt="Grid-images" />
+                      <div class="gText text-black">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
                     </div>
 
                     <div class="gridItem2">
                       <img
-                        src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
+                        src="images/suitsupply_hero-image_campaign-ss22.webp"
                         alt="Grid-images"
                       />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+
+                    <div class="gridItem2">
+                      <img src="images/moooi-andres.webp" alt="Grid-images" />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
                     </div>
 
                     <div class="gridItem2">
                       <img
-                        src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
+                        src="images/micha-5_70x46-73cm_cmyk_small.webp"
                         alt="Grid-images"
                       />
-                    </div>
-
-                    <div class="gridItem2">
-                      <img
-                        src="images/_0a3ef1ec-46fe-4b03-b6b7-dda607dc88d4.jpeg"
-                        alt="Grid-images"
-                      />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
                     </div>
                     <div class="gridItem2">
                       <img
-                        src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
+                        src="images/foam-mous-lamrabat-loft-art-gallery.webp"
                         alt="gridimage"
                       />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="gridItem2">
+                      <img src="images/adidas-prada.webp" alt="Grid-images" />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+
+                    <div class="gridItem2">
+                      <img
+                        src="images/coquille-chair-solo-powerhouse-company-x-lensvelt.webp"
+                        alt="Grid-images"
+                      />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+
+                    <div class="gridItem2">
+                      <img
+                        src="images/desktop_cover_powerhouse.webp"
+                        alt="Grid-images"
+                      />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
+                    </div>
+                    <div class="gridItem2">
+                      <img src="images/4.webp" alt="gridimage" />
+                      <div class="gText">
+                        <span>Lorem</span> Lorem ipsum dolor
+                      </div>
                     </div>
                   </div>
                   <div class="scroller-copytwo"></div>
@@ -105,7 +186,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 pe-0">
+          <div class="col-lg-6">
             <div class="md-rightSide textBox">
               <div class="headTag">
                 <div
@@ -154,28 +235,26 @@
         </div>
       </div>
     </section>
-    <script>
+    <!-- <script>
       $(document).ready(function () {
-        $(".scroller").mouseover(function () {
-          $this.css("background-color", "yellow");
+        $(".scroller-copy").mouseover(function () {
+          $(this).css("transform", "none");
         });
-        $(".scroller").mouseout(function () {
-          $this.css("background-color", "lightgray");
+        $(".gridoneproperty").mouseout(function () {
+          $(this).css("transform", "100px");
         });
       });
-    </script>
+    </script> -->
     <script>
       let scrolltl = gsap.timeline();
-      var scroller = document.querySelector(".scroller");
+      var scroller = document.querySelector(".parentGrid");
       let scrollerheight = scroller.offsetHeight;
       let windowheight = window.innerHeight;
       let scrolldistance = scrollerheight - windowheight;
       let scrolling = false;
-
       let scrollcopy = document.querySelector(".scroller-copy");
       let scrollscrolllength = scrollerheight * 1;
-      scrollcopy.style.height = scrollscrolllength + "px";
-
+      scrollcopy.style.height = "0px";
       scrolltl.to(scroller, {
         y: -scrolldistance,
         duration: 10,
@@ -185,16 +264,14 @@
     </script>
     <script>
       let scroltl = gsap.timeline();
-      var scroler = document.querySelector(".scrollertwo");
-      let scrolerheight = scroller.offsetHeight;
+      var scroler = document.querySelector(".parentndGrid");
+      let scrolerheight = scroler.offsetHeight;
       let windowsheight = window.innerHeight;
       let scroldistance = scrolerheight - windowsheight;
       let scroling = false;
-
       let scrolcopy = document.querySelector(".scroller-copytwo");
       let scrolscrolllength = scrolerheight * 1;
-      scrolcopy.style.height = scrolscrolllength + "px";
-
+      scrolcopy.style.height = "0px";
       scroltl.to(scroler, {
         y: -scroldistance,
         duration: 10,
