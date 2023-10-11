@@ -198,18 +198,19 @@
               </div>
               <div class="pageTitle h-100">
                 <div class="d-flex flex-column justify-content-between h-100">
-                  <div class="heading text-uppercase">
+                  <h1 class="heading text-uppercase">
                     <div id="textbox1" class="headingText">
-                      <h1>WE BUILD</h1>
+                      WE BUILD
                     </div>
                     <div id="textbox2" class="headingText">
-                      <h1>DIGITAL</h1>
+                      DIGITAL
                     </div>
                     <div id="textbox3" class="headingText">
-                      <h1>FLAGSHIP</h1>
+                      FLAGSHIP
                     </div>
-                    <div id="textbox4" class="headingText"><h1>STORE</h1></div>
-                  </div>
+                    <div id="textbox4" class="headingText">
+                      STORE</div>
+                  </h1>
                   <div class="subHeading w-75 ms-md-auto me-md-2">
                     <div class="d-flex flex-column justify-content-end gap-3">
                       <div class="subheadText">
@@ -245,8 +246,16 @@
         });
       });
     </script> -->
-    <script>
-      let scrolltl = gsap.timeline();
+     <script>
+      function animateLines(){
+        gsap.to("#textbox1", {opacity:1, duration:1,delay:0});
+        gsap.to("#textbox2", {opacity:1, duration:1,delay:1});
+        gsap.to("#textbox3", {opacity:1, duration:1,delay:2});
+        gsap.to("#textbox4", {opacity:1, duration:1,delay:3});
+      }
+      window.addEventListener('load', animateLines);
+      </script>
+    <script>let scrolltl = gsap.timeline();
       var scroller = document.querySelector(".scroller");
       let scrollerheight = scroller.offsetHeight;
       let windowheight = window.innerHeight;
@@ -257,7 +266,7 @@
       scrollcopy.style.height =scrolldistance +  "px";
       scrolltl.to(scroller, {
         y: -scrolldistance,
-        duration: 100,
+        duration: 20,
         timeScale: 1,
         ease: "linear",
       });
@@ -274,19 +283,11 @@
       scrolcopy.style.height =scroldistance  +"px";
       scroltl.to(scroler, {
         y: -scroldistance,
-        duration: 100,
+        duration: 20,
         timeScale: 1,
         ease: "linear",
       });
     </script>
-    <script>
-      function animateHeading(){
-        gsap.to("#textbox1", {opacity:1, duration:1,delay:0});
-        gsap.to("#textbox2", {opacity:1, duration:1,delay:1});
-        gsap.to("#textbox3", {opacity:1, duration:1,delay:2});
-        gsap.to("#textbox4", {opacity:1, duration:1,delay:3});
-      }
-      window.addEventListener('load', animateHeading);
-      </script>
+   
   </body>
 </html>
