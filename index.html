@@ -19,6 +19,45 @@
   </head>
   <body>
     <header class="header"><div class="container-fluid"></div></header>
+    <article class="nav-Wrapper">
+      <div class="container-fluid">
+        <div class="navwrap">
+          <div class="navbtn"><span></span></div>
+          <div class="loading_wrapper">
+            <div class="loading-inner-content">
+              <div class="navbox box-1">
+                <div class="box-content">
+                  <img src="images/desktop_cover_powerhouse.webp" alt="" />
+                </div>
+              </div>
+              <div class="navbox box-2">
+                <div class="box-content">
+                  <img src="images/4.webp" alt="" />
+                </div>
+              </div>
+              <div class="navbox box-3">
+                <div class="box-content">
+                  <img src="images/12.webp" alt="" />
+                </div>
+              </div>
+              <div class="navbox box-4">
+                <div class="box-content">
+                  <img src="images/abel-nori.webp" alt="" />
+                </div>
+              </div>
+              <div class="navbox box-5">
+                <div class="box-content">
+                  <img
+                    src="images/_27aad7d6-6d46-4d34-be1e-dd257e5f4dd5.jpeg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
     <section class="singlePage">
       <div class="container-fluid">
         <div class="row">
@@ -199,17 +238,10 @@
               <div class="pageTitle h-100">
                 <div class="d-flex flex-column justify-content-between h-100">
                   <h1 class="heading text-uppercase">
-                    <div id="textbox1" class="headingText">
-                      WE BUILD
-                    </div>
-                    <div id="textbox2" class="headingText">
-                      DIGITAL
-                    </div>
-                    <div id="textbox3" class="headingText">
-                      FLAGSHIP
-                    </div>
-                    <div id="textbox4" class="headingText">
-                      STORE</div>
+                    <div id="textbox1" class="headingText">WE BUILD</div>
+                    <div id="textbox2" class="headingText">DIGITAL</div>
+                    <div id="textbox3" class="headingText">FLAGSHIP</div>
+                    <div id="textbox4" class="headingText">STORE</div>
                   </h1>
                   <div class="subHeading w-75 ms-md-auto me-md-2">
                     <div class="d-flex flex-column justify-content-end gap-3">
@@ -236,26 +268,17 @@
         </div>
       </div>
     </section>
-    <!-- <script>
-      $(document).ready(function () {
-        $(".scroller-copy").mouseover(function () {
-          $(this).css("transform", "none");
-        });
-        $(".gridoneproperty").mouseout(function () {
-          $(this).css("transform", "100px");
-        });
-      });
-    </script> -->
-     <script>
-      function animateLines(){
-        gsap.to("#textbox1", {opacity:1, duration:1,delay:0});
-        gsap.to("#textbox2", {opacity:1, duration:1,delay:1});
-        gsap.to("#textbox3", {opacity:1, duration:1,delay:2});
-        gsap.to("#textbox4", {opacity:1, duration:1,delay:3});
+    <script>
+      window.addEventListener("load", animateLines);
+      function animateLines() {
+        gsap.to("#textbox1", { y: -50, opacity: 1, duration: 1, delay: 0 });
+        gsap.to("#textbox2", { y: -50, opacity: 1, duration: 1, delay: 1 });
+        gsap.to("#textbox3", { y: -50, opacity: 1, duration: 1, delay: 2 });
+        gsap.to("#textbox4", { y: -50, opacity: 1, duration: 1, delay: 3 });
       }
-      window.addEventListener('load', animateLines);
-      </script>
-    <script>let scrolltl = gsap.timeline();
+    </script>
+    <script>
+      let scrolltl = gsap.timeline();
       var scroller = document.querySelector(".scroller");
       let scrollerheight = scroller.offsetHeight;
       let windowheight = window.innerHeight;
@@ -263,7 +286,7 @@
       let scrolling = false;
       let scrollcopy = document.querySelector(".scroller-copy");
       let scrollscrolllength = scrollerheight * 1;
-      scrollcopy.style.height =scrolldistance +  "px";
+      scrollcopy.style.height = scrolldistance + "px";
       scrolltl.to(scroller, {
         y: -scrolldistance,
         duration: 20,
@@ -271,6 +294,7 @@
         ease: "linear",
       });
     </script>
+
     <script>
       let scroltl = gsap.timeline();
       var scroler = document.querySelector(".scrollertwo");
@@ -280,7 +304,7 @@
       let scroling = false;
       let scrolcopy = document.querySelector(".scroller-copytwo");
       let scrolscrolllength = scrolerheight * 1;
-      scrolcopy.style.height =scroldistance  +"px";
+      scrolcopy.style.height = scroldistance + "px";
       scroltl.to(scroler, {
         y: -scroldistance,
         duration: 20,
@@ -288,6 +312,30 @@
         ease: "linear",
       });
     </script>
-   
+    <script>
+      $(window).on("load", function () {
+        var $loadingWrapper = $(".loading_wrapper"),
+          $loadingInnerContent = $(".loading-inner-content");
+        $loadingInnerContent.on("mousemove touchmove", function (e) {
+          if (e.clientX > $loadingWrapper.width() / 2) {
+            TweenMax.to($loadingWrapper, 2, {
+              scrollTo: {
+                x: "+=150",
+              },
+
+              ease: Power2.linear,
+            });
+          } else {
+            TweenMax.to($loadingWrapper, 2, {
+              scrollTo: {
+                x: "-=150",
+              },
+
+              ease: Power2.linear,
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>

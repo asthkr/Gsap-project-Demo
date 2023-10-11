@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: auto;
 }
 body .container,
 body .container-md,
@@ -29,9 +30,10 @@ body a {
 
 .singlePage .md-rightSide {
   height: 100vh;
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
+  left: 50%;
   background: #f2efe6;
 }
 .singlePage .md-rightSide .headTag {
@@ -49,11 +51,28 @@ body a {
 .singlePage .md-rightSide .pageTitle {
   padding: 12vw 4vw 5vw 4vw;
 }
+.singlePage .md-rightSide .pageTitle .heading {
+  position: relative;
+}
 .singlePage .md-rightSide .pageTitle .heading .headingText {
+  position: absolute;
+  opacity: 0;
   font-size: 66px;
   line-height: 0.8;
   color: black;
   font-weight: 400;
+}
+.singlePage .md-rightSide .pageTitle .heading #textbox1 {
+  top: 50px;
+}
+.singlePage .md-rightSide .pageTitle .heading #textbox2 {
+  top: 100px;
+}
+.singlePage .md-rightSide .pageTitle .heading #textbox3 {
+  top: 150px;
+}
+.singlePage .md-rightSide .pageTitle .heading #textbox4 {
+  top: 200px;
 }
 .singlePage .md-rightSide .pageTitle .subHeading .subheadText p {
   font-size: 24px;
@@ -141,4 +160,68 @@ body a {
 .singlePage .parentndGrid .gridoneproperty .gridItem2,
 .singlePage .parentndGrid .gridtwoproperty .gridItem2 {
   height: 450px;
+}
+
+.nav-Wrapper {
+  width: 100%;
+  position: fixed;
+  top: auto;
+  bottom: 0px;
+  height: 60%;
+  background: rgba(124, 124, 124, 0.5764705882);
+  transform: translateX(-50%);
+  left: 50%;
+  right: 0;
+  border: 1px solid red;
+  z-index: 800;
+}
+.nav-Wrapper .navwrap {
+  position: relative;
+  height: 100%;
+}
+.nav-Wrapper .navwrap .navbtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-Wrapper .navwrap .navbtn span {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #c38133;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.231372549);
+}
+.nav-Wrapper .navwrap .loading_wrapper {
+  width: 100%;
+  cursor: pointer;
+}
+.nav-Wrapper .navwrap .loading-inner-content {
+  width: 1500px;
+  background: #000000;
+}
+.nav-Wrapper .navwrap .navbox {
+  position: relative;
+  margin: 40px 40px 0 0;
+  float: left;
+  overflow: hidden;
+}
+.nav-Wrapper .navwrap .navbox:first-child {
+  margin-left: 40px;
+}
+.nav-Wrapper .navwrap .navbox:last-child {
+  margin-right: 40px;
+}
+.nav-Wrapper .navwrap .box-content {
+  border-radius: 7px;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+}
+.nav-Wrapper .navwrap .box-content > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
