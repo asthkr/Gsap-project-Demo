@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
 body .container,
 body .container-md,
 body .container-lg,
@@ -23,17 +26,38 @@ body p {
 body a {
   text-decoration: none;
 }
+body .hidden {
+  opacity: 0;
+}
+
+.header {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.header .logowrapper .logo {
+  display: flex;
+  align-items: baseline;
+}
+.header .logowrapper .logo .letter {
+  font-size: 18px;
+  font-weight: 700;
+}
+.header .logowrapper .logo #l2 {
+  font-size: 14px;
+}
 
 .singlePage {
   display: block;
 }
 .singlePage .md-rightSide {
   height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 50%;
   background: #f2efe6;
+  position: relative;
+  z-index: 800;
 }
 .singlePage .md-rightSide .headTag {
   position: absolute;
@@ -42,36 +66,37 @@ body a {
   padding: 20px 40px 0px 0;
 }
 .singlePage .md-rightSide .headTag h6 {
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 16px;
 }
 .singlePage .md-rightSide .headTag p {
+  font-weight: 500;
   font-size: 14px;
 }
 .singlePage .md-rightSide .pageTitle {
-  padding: 12vw 4vw 5vw 4vw;
+  padding: 180px 5vw 4vw 5vw;
 }
 .singlePage .md-rightSide .pageTitle .heading {
   position: relative;
+  transform: translateY(100px);
 }
 .singlePage .md-rightSide .pageTitle .heading .headingText {
-  position: absolute;
+  transform: translateY(200px);
   opacity: 0;
+  position: absolute;
   font-size: 66px;
   line-height: 0.8;
   color: black;
   font-weight: 400;
 }
-.singlePage .md-rightSide .pageTitle .heading #textbox1 {
-  top: 50px;
-}
-.singlePage .md-rightSide .pageTitle .heading #textbox2 {
-  top: 100px;
-}
 .singlePage .md-rightSide .pageTitle .heading #textbox3 {
-  top: 150px;
+  margin-left: 1ch;
 }
-.singlePage .md-rightSide .pageTitle .heading #textbox4 {
-  top: 200px;
+.singlePage .md-rightSide .pageTitle .subHeading {
+  width: 60%;
+}
+.singlePage .md-rightSide .pageTitle .subHeading .subheadText {
+  width: 100%;
 }
 .singlePage .md-rightSide .pageTitle .subHeading .subheadText p {
   font-size: 24px;
@@ -83,13 +108,13 @@ body a {
 .singlePage .parentGrid,
 .singlePage .parentndGrid {
   position: relative;
+  z-index: 700;
 }
-.singlePage .parentGrid .scroller-copy,
-.singlePage .parentGrid .scroller-copytwo,
-.singlePage .parentndGrid .scroller-copy,
-.singlePage .parentndGrid .scroller-copytwo {
-  position: relative;
-  width: 100%;
+.singlePage .parentGrid .scroller,
+.singlePage .parentGrid .scrollertwo,
+.singlePage .parentndGrid .scroller,
+.singlePage .parentndGrid .scrollertwo {
+  overflow: hidden;
 }
 .singlePage .parentGrid .gridoneproperty,
 .singlePage .parentGrid .gridtwoproperty,
@@ -97,8 +122,7 @@ body a {
 .singlePage .parentndGrid .gridtwoproperty {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-right: 0.5rem;
+  gap: 1.5rem;
 }
 .singlePage .parentGrid .gridoneproperty .gridItem,
 .singlePage .parentGrid .gridoneproperty .gridItem2,
