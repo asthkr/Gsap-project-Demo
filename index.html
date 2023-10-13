@@ -37,26 +37,56 @@
             <div class="loading_wrapper">
               <div class="loading-inner-content">
                 <div class="box box-1">
+                  <div class="boxtitle">
+                    <span class="dotWrapper"></span>
+                    <span class="p-link text-uppercase"
+                      ><a href="#"><h6>Home</h6></a>
+                    </span>
+                  </div>
                   <div class="box-content">
                     <img src="images/12.webp" alt="image" />
                   </div>
                 </div>
                 <div class="box box-2">
+                  <div class="boxtitle">
+                    <span class="dotWrapper"></span>
+                    <span class="p-link text-uppercase"
+                      ><a href="#"><h6>Work</h6></a>
+                    </span>
+                  </div>
                   <div class="box-content">
                     <img src="images/12.webp" alt="image" />
                   </div>
                 </div>
                 <div class="box box-3">
+                  <div class="boxtitle">
+                    <span class="dotWrapper"></span>
+                    <span class="p-link text-uppercase"
+                      ><a href="#"><h6>About</h6></a>
+                    </span>
+                  </div>
                   <div class="box-content">
                     <img src="images/12.webp" alt="image" />
                   </div>
                 </div>
                 <div class="box box-4">
+                  <div class="boxtitle">
+                    <span class="dotWrapper"></span>
+                    <span class="p-link text-uppercase"
+                      ><a href="#"><h6>Contact</h6></a>
+                    </span>
+                  </div>
                   <div class="box-content">
                     <img src="images/12.webp" alt="image" />
                   </div>
                 </div>
                 <div class="box box-5">
+                  <div class="boxtitle">
+                    <span class="dotWrapper"></span>
+                    <span class="p-link text-uppercase"
+                      ><a href="#"><h6>Join us</h6></a>
+                    </span>
+                  </div>
                   <div class="box-content">
                     <img src="images/12.webp" alt="image" />
                   </div>
@@ -89,7 +119,7 @@
                     <div id="textbox4" class="headingText">STORE</div>
                   </h1>
                   <div class="subHeading ms-md-auto">
-                    <div class="d-flex flex-column justify-content-end gap-3">
+                    <div class="d-flex flex-column justify-content-end gap-4">
                       <div class="subheadText">
                         <p>
                           We believe our industry is blinded by numbers. While
@@ -97,12 +127,10 @@
                         </p>
                       </div>
                       <div class="page-link">
-                        <span class="dotWrapper"
-                          ><span class="dot"> </span
-                        ></span>
+                        <span class="dotWrapper"></span>
                         <span class="p-link text-uppercase"
-                          ><a href="#"><h6>about Us</h6></a></span
-                        >
+                          ><a href="#"><h6>about Us</h6></a>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -382,8 +410,13 @@
           // Play the animation
           animation = gsap.fromTo(
             box2,
-            { opacity: 0, scale: 0.5 },
-            { opacity: 1, scale: 1, duration: 0.5 }
+            { opacity: 0, scale: 0.5, bottom: "-100%" },
+            {
+              opacity: 1,
+              scale: 1,
+              bottom: 0,
+              duration: 0.5,
+            }
           );
         } else {
           // Reverse the animation
@@ -391,7 +424,7 @@
             animation.reverse();
           }
         }
-        box2.classList.toggle("hidden");
+        navbtn.classList.toggle("btnavclr"), { delay: 3 };
       });
     </script>
     <script>
